@@ -13,6 +13,7 @@ const createTuit = (req, res) => {
     newTuit.handle = "@nasa";
     newTuit.topic = "Space";
     newTuit.time = "2h";
+    newTuit.title = newTuit.tuit.substring(0, newTuit.tuit.length>20? 20:newTuit.tuit.length)
 
     tuits.push(newTuit);
     res.json(newTuit);
