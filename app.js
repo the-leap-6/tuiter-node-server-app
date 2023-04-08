@@ -1,3 +1,9 @@
+import mongoose from "mongoose";
+const CONNECTION_STRING = process.env.DB_CONNECTION_STRING
+    // || 'mongodb+srv://nidhiumesh:Nidhi12345@cluster0.lqgoj7t.mongodb.net/?retryWrites=true&w=majority';
+||'mongodb://127.0.0.1:27017/tuiter';
+console.log(CONNECTION_STRING);
+mongoose.connect(CONNECTION_STRING);
 import express from 'express';
 import HelloController
     from "./controllers/hello-controller.js"
